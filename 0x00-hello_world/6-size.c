@@ -1,8 +1,8 @@
 # include <stdio.h>
 
 /**
- * main - entry point
- * return: Always o (Success)
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
