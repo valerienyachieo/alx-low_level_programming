@@ -10,13 +10,13 @@ int main(void)
 	char y;
 
 	x = '0';
-	y = 'A';
+	y = 'a';
 	while (x <= '9')
 	{
 		putchar(x);
 		x++;
 	}
-	while (y < 'F')
+	while (y < 'g')
 	{
 		putchar(y);
 		y++;
@@ -24,3 +24,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
