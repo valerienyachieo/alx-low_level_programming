@@ -1,12 +1,18 @@
 #include "main.h"
 /**
- * main - check the code.
+ * print_alphabet_x10 -function that prints 10x the alphabet in lower cases.
  *
  * Return: Always 0.
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	putchar('\n');
-	return (0);
+	int i;
+	char x;
+
+	for (i = 0; i <= 10 ; i++)
+	{
+		for (x = 'a'; x <= 'z'; x++)
+			_putchar(x);
+	_putchar('\n');
+	}
 }
