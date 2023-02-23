@@ -7,19 +7,19 @@
 int main(void)
 {
 	int count;
-	int x, y, z;
+	unsigned long int x, y, z;
 
 	x = 0;
 	y = 1;
 	z = 0;
 
-	for (count = 0; count < 50; count++)
+	for (count = 1; count <= 50; count++)
 	{
-		z = x + y;
-		printf("%d", z);
+		printf("%lu, ", z);
 
 		x = y;
 		y = z;
+		z = x + y;
 	}
 	return (0);
 }
