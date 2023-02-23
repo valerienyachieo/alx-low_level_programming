@@ -14,13 +14,12 @@ int main(void)
 	z = 1;
 	for (count = 0; count < 98; count++)
 	{
-		printf("%lu, ", z);
-		x = y;
-		y = z;
-		z = x + y;
 		if (count != 97)
 		{
 			printf("%lu, ", z);
+			x = y;
+			y = z;
+			z = x + y;
 		}
 		else
 		{
