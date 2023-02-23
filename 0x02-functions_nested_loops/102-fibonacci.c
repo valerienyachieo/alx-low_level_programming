@@ -9,18 +9,27 @@ int main(void)
 	int count;
 	unsigned long int x, y, z;
 
-	x = 0;
+	x = 1;
 	y = 1;
-	z = 0;
+	z = 1;
 
-	for (count = 1; count <= 50; count++)
+	for (count = 0; count < 50; count++)
 	{
-		printf("%lu, ", z);
-
-		x = y;
-		y = z;
-		z = x + y;
+		if (count != 49)
+		{
+			printf("%lu, ", z);
+			x = y;
+			y = z;
+			z = x + y;
+		}
+		else
+		{
+			printf("%lu", z);
+		}
 	}
+	printf("\n");
+	
+	
 	return (0);
 }
 
