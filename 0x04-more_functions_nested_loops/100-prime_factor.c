@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  * main - check the code
  *
@@ -12,6 +12,11 @@ int main(void)
 	for (y = 2; y < x; y++)
 	{
 		if (x % y == 0)
+		{
 			x  = (x / y);
 			y--;
-
+		}
+	}
+	printf("%ld\n", y);
+	return (0);
+}
