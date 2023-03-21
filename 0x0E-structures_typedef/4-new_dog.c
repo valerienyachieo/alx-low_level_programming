@@ -10,19 +10,24 @@
  */
 char *_strdup(char *str)
 {
-	unsigned int i, j;
-	char *dupstr;
+	char *ar;
+	unsigned int i = 0;
+	unsigned int j = 0;
 
-	if (str == 0)
+	if (str == NULL)
 		return (NULL);
-	for (i = 0; str[i]; i++)
-	dupstr = malloc(sizeof(char) * (i + 1));
-	if (dupstr == NULL)
+	while (str[i])
+		i++;
+	ar = malloc(sizeof(char) * (i + 1));
+	if (ar == NULL)
 		return (NULL);
-	for (j = 0; str[j]; j++)
-		dupstr[j] = str[j];
-	dupstr[j] = 0;
-	return (dupstr);
+	while (str[j])
+	{
+		ar[j] = str[j];
+		j++;
+	}
+	ar[j] = 0;
+	return (ar);
 }
 /**
  * new_dog - function that creates a new structure
