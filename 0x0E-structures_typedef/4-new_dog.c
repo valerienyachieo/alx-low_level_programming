@@ -16,13 +16,12 @@ char *_strdup(char *str)
 	if (str == 0)
 		return (NULL);
 	for (i = 0; str[i]; i++)
-		j++;
 	dupstr = malloc(sizeof(char) * (i + 1));
 	if (dupstr == NULL)
 		return (NULL);
-	for (i = 0; str[i]; i++)
-		dupstr[i] = str[i];
-	dupstr[j] = '\0';
+	for (j = 0; str[j]; j++)
+		dupstr[j] = str[j];
+	dupstr[j] = 0;
 	return (dupstr);
 }
 /**
@@ -40,8 +39,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *cpname;
 	char *cpowner;
 
-	if (name == NULL || age < 0 || owner == NULL)
-		return (NULL);
 	new = malloc(sizeof(dog_t));
 	if (new == NULL)
 		return (NULL);
