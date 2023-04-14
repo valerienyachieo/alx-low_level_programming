@@ -31,6 +31,7 @@ int main(int argc, char **argv)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+		r = read(file_from, buffer, 1024);
 	} while (r > 0);
 	r = close(file_from);
 	if (r == -1)
